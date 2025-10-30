@@ -1,0 +1,303 @@
+/* =========================
+   VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-principal: #ffc107; /* Amarillo cálido */
+  --color-secundario: #6c4c2b; /* Marrón elegante */
+  --color-texto: #333;
+  --color-fondo: whitesmoke;
+  --color-gris: #f8f9fa;
+  --color-footer: #212529;
+  --color-acento: #ffb300;
+  --font-principal: "Poppins", "Segoe UI", sans-serif;
+  --azul-marino: #1a4b6d;
+  --dorado: #c19a53;
+  --verde-agua: #2a9d8f;
+}
+
+body {
+  font-family: var(--font-principal);
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.5;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.navbar-brand img {
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-secundario);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--color-principal);
+}
+
+#btn-reserva {
+  background-color: var(--color-principal);
+  border: none;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+#btn-reserva:hover {
+  background-color: var(--color-acento);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/img/section-header.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 7rem 1rem;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#hero h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   SECCIÓN: ACERCA
+   ========================= */
+
+#acerca img {
+  border-radius: 20px;
+}
+
+/* =========================
+   SECCIÓN: SERVICIOS / MENÚ
+   ========================= */
+
+#servicios,
+#menu {
+  background-color: var(--color-gris);
+  padding: 4rem 0;
+}
+
+#servicios h2,
+.menu-categoria h3 {
+  color: var(--color-secundario);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.menu-categoria h3 {
+  border-left: 5px solid var(--color-principal);
+  padding-left: 10px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Items del menú */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.menu-item span {
+  color: var(--color-secundario);
+  font-weight: 500;
+}
+
+/* =========================
+   SECCIÓN: CONTACTO
+   ========================= */
+
+.jumbotron-contacto {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/img/section-contacto.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.contact-form,
+#contactForm {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#contactForm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+}
+
+#contactForm label {
+  color: #444;
+  font-weight: 600;
+}
+
+#contactForm input,
+#contactForm textarea,
+#contactForm select {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus,
+#contactForm select:focus {
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 0.2rem rgba(247, 161, 2, 0.25);
+}
+
+#contactForm button {
+  background-color: var(--color-principal);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px 35px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contactForm button:hover {
+  background-color: var(--color-acento);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   ELEMENTOS INTERACTIVOS
+   ========================= */
+
+.btn-warning {
+  background-color: var(--color-principal);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: var(--color-acento);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Animaciones de entrada */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+
+[data-animate].active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  background-color: var(--color-footer);
+  color: #fff;
+}
+
+footer .btn-outline-light {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+footer .btn-outline-light:hover {
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+footer p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    flex-direction: row;
+    font-size: 0.9rem;
+  }
+
+  #hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-item span {
+    margin-top: 0.25rem;
+  }
+}
